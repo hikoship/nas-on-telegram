@@ -1,0 +1,12 @@
+version: '3'
+services:
+  telegram-bot:
+    build: .
+    container_name: telegram-bot
+    ports:
+      - "8000:5000"
+    env_file:
+      - .env
+    restart: always
+    volumes:
+      - ./app:/app/app
